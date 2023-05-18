@@ -11,7 +11,9 @@ public class IKSnapper : MonoBehaviour
     [SerializeField] private AnimationCurve activationAnimation;
     [SerializeField] private AnimationCurve deactivationAnimation;
     private bool currentOverride;
-    
+
+    private Coroutine animation;
+
     private void UpdateInfluence(float weight)
     {
         if (animatedBones == null) return;
@@ -33,11 +35,15 @@ public class IKSnapper : MonoBehaviour
 
     public void OverrideIK(bool state)
     {
+        if (animation != null)
+        {
+            return;
+        }
         proceduralInfluence = state ? 1 : 0;
         if (state != currentOverride)
         {
             currentOverride = state;
-            StartCoroutine(AnimateInfluence());
+            animation = StartCoroutine(AnimateInfluence());
         }
     }
 
