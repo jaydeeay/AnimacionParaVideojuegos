@@ -12,13 +12,9 @@ public class AttackController : MonoBehaviour
     {
         if (context.action.WasPerformedThisFrame())
         {
-            Debug.Log("Esto prende");
+            Debug.Log("a");
             onAttack?.Invoke();
         }
-    }
-    public void GetHit()
-    {
-        Debug.Log("lo cascaron");
-        onDamage?.Invoke();
+       
     }
 }

@@ -10,8 +10,7 @@ public class IKSurface : MonoBehaviour
     [SerializeField] private LayerMask detectionMask;
     [SerializeField] private Transform referencePoint;
     [SerializeField] private Transform raycastReference;
-
-    private bool ayuda = false;
+    
     //Encontrar objetos idoneos
     
     /// <summary>
@@ -31,7 +30,7 @@ public class IKSurface : MonoBehaviour
         
             //Se crea una lista de los puntos más cercanos a los colliders
             var closestPoints = nearColliders.Select(collider => collider.ClosestPoint(referencePoint.position));
-
+        
             //Se encuentra el punto más cercano, del collider más cercano
             Vector3 closestPoint = closestPoints.OrderBy(position => Vector3.Distance(referencePoint.position, position))
                 .First();
@@ -74,19 +73,15 @@ public class IKSurface : MonoBehaviour
             transform.position = nearestPosition;
             //Mandar la señal
             gameObject.SendMessage("OverrideIK", true, SendMessageOptions.DontRequireReceiver);
-            ayuda = true;
         }
         else
         {
             gameObject.SendMessage("OverrideIK", false, SendMessageOptions.DontRequireReceiver);
-            ayuda = false;
         }
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = ayuda ? Color.green : Color.red;
         Gizmos.DrawWireSphere(referencePoint.position, detectionRadius);
-        
     }
 }
