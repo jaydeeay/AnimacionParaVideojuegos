@@ -87,6 +87,7 @@ MonoBehaviour:
   - {fileID: 6849954202010469404}
   - {fileID: 8806059030056029597}
   - {fileID: 3144811879986121149}
+  - {fileID: 0}
   activationAnimation:
     serializedVersion: 2
     m_Curve:
@@ -3200,7 +3201,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2131396620427817208}
-  m_LocalRotation: {x: 0.039721876, y: 0.00021744304, z: -0.0054826965, w: 0.9991957}
+  m_LocalRotation: {x: 0.03972188, y: 0.00021744304, z: -0.005482697, w: 0.9991957}
   m_LocalPosition: {x: 7.4505804e-11, y: 0.0004944965, z: -2.0489097e-10}
   m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 0.99999994}
   m_ConstrainProportionsScale: 0
@@ -6634,7 +6635,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3498027719090624958}
-  m_LocalRotation: {x: 0.039721847, y: -0.00021745784, z: 0.0054827556, w: 0.9991957}
+  m_LocalRotation: {x: 0.03972185, y: -0.00021745784, z: 0.005482756, w: 0.9991957}
   m_LocalPosition: {x: -7.4505804e-11, y: 0.00049449736, z: -0.0000000017043202}
   m_LocalScale: {x: 1, y: 0.9999999, z: 0.99999994}
   m_ConstrainProportionsScale: 0
